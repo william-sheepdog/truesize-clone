@@ -1,0 +1,2 @@
+# truesize-clone
+copyoftruesize
