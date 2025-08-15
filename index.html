@@ -1,18 +1,37 @@
-<html><head> 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The True Size of Countries</title>
+    <!-- Link to Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/><!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     crossorigin=""/>
+    <!-- Link to our custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>The True Size of Countries</h1>
+            <p>Select a country to see how its size is distorted by the Mercator projection.</p>
+        </div>
+        <div class="controls">
+            <input type="text" id="country-search" placeholder="Search for a country...">
+            <button id="clear-btn">Clear Selections</button>
+        </div>
+    </div>
+
+    <!-- The div where the map will be rendered -->
+    <div id="map"></div>
+
+    <!-- Link to Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-</head>
-  <body><div id="map"></div>#map { height: 180px; }
-var map = L.map('map').setView([51.505, -0.09], 13);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-
-
-  </body></html>
+    <!-- Link to our custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
