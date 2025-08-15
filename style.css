@@ -1,0 +1,83 @@
+/* General body styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container for header and controls */
+.container {
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensures it stays on top of the map */
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #005a9c;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Controls styling */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+#country-search {
+    width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#country-search:focus {
+    border-color: #007bff;
+}
+
+#clear-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#clear-btn:hover {
+    background-color: #c82333;
+}
+
+/* Map container styling */
+#map {
+    height: 100%; /* Take up the remaining vertical space */
+    width: 100%;
+    background-color: #eaf2f8;
+}
